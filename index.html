@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Clássica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pokédex Completa</h1>
+    <p>Consumo de dados com filtros e detalhes</p>
+  </header>
+
+  <main>
+    <!-- Área de Filtros -->
+    <div class="filters-container">
+      <div class="filter-group">
+        <label for="select-generation">Geração:</label>
+        <select id="select-generation">
+          <option value="1">Geração I (1 - 151)</option>
+          <option value="2">Geração II (152 - 251)</option>
+          <option value="3">Geração III (252 - 386)</option>
+          <option value="4">Geração IV (387 - 493)</option>
+          <option value="5">Geração V (494 - 649)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="select-type">Tipo:</label>
+        <select id="select-type">
+          <option value="all">Todos os Tipos</option>
+          <option value="normal">Normal</option>
+          <option value="fire">Fogo (Fire)</option>
+          <option value="water">Água (Water)</option>
+          <option value="grass">Planta (Grass)</option>
+          <option value="electric">Elétrico (Electric)</option>
+          <option value="ice">Gelo (Ice)</option>
+          <option value="fighting">Lutador (Fighting)</option>
+          <option value="poison">Veneno (Poison)</option>
+          <option value="ground">Terra (Ground)</option>
+          <option value="flying">Voador (Flying)</option>
+          <option value="psychic">Psíquico (Psychic)</option>
+          <option value="bug">Inseto (Bug)</option>
+          <option value="rock">Pedra (Rock)</option>
+          <option value="ghost">Fantasma (Ghost)</option>
+          <option value="dragon">Dragão (Dragon)</option>
+          <option value="steel">Aço (Steel)</option>
+          <option value="fairy">Fada (Fairy)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Contêiner dos Cards -->
+    <div id="pokemon-container" class="grid-container"></div>
+
+    <!-- Controles de Paginação -->
+    <div class="pagination">
+      <button id="btn-prev" disabled>Anterior</button>
+      <span id="page-info">Página 1</span>
+      <button id="btn-next">Próximo</button>
+    </div>
+  </main>
+
+  <!-- Modal para exibir detalhes do Pokémon -->
+  <div id="modal-details" class="modal hidden">
+    <div class="modal-content">
+      <button id="btn-close" class="close-btn">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Projeto de Front-end — Consumo de PokéAPI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
